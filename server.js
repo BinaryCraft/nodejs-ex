@@ -8,7 +8,7 @@ Object.assign=require('object-assign')
 app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
 
-/ Add a handler to inspect the req.secure flag (see
+// Add a handler to inspect the req.secure flag (see
 // http://expressjs.com/api#req.secure). This allows us
 // to know whether the request was via http or https.
 app.use (function (req, res, next) {
