@@ -11,15 +11,15 @@ app.use(morgan('combined'))
 // Add a handler to inspect the req.secure flag (see
 // http://expressjs.com/api#req.secure). This allows us
 // to know whether the request was via http or https.
-app.use (function (req, res, next) {
-        if (req.secure) {
-                // request was via https, so do no special handling
-                next();
-        } else {
-                // request was via http, so redirect to https
-                res.redirect('https://' + req.headers.host + req.url);
-        }
-});
+//app.use (function (req, res, next) {
+//        if (req.secure) {
+//                // request was via https, so do no special handling
+//                next();
+//        } else {
+//                // request was via http, so redirect to https
+//                res.redirect('https://' + req.headers.host + req.url);
+//        }
+//});
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
